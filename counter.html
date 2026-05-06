@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: lightcoral;
+        font-family: Arial;
+        color: white;
+      }
+      #count {
+        font-size: 80px;
+      }
+      button {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      #resetBtn {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Counter</h1>
+    <p id="count">0</p>
+
+    <button onclick="increase()">+ Increase</button>
+    <button onclick="decrease()">- Decrease</button>
+    <button onclick="reset()" id="resetBtn">Reset</button>
+
+    <script>
+      var count = 0;
+      function increase() {
+        count = count + 1;
+        document.getElementById("count").innerHTML = count;
+      }
+      function decrease() {
+        count = count - 1;
+        document.getElementById("count").innerHTML = count;
+      }
+      function reset() {
+        count = 0;
+        document.getElementById("count").innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
